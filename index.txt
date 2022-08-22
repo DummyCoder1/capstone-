@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>School Extra-curricular Classes</title>
+   <style>
+    body {
+        background-color: #FFF7DF;
+        margin:0;
+        font-family: sans-serif;
+    }
+    .link {
+        font-size: 15px;
+        font-weight:bold;
+        color:#FBCD8A;
+        padding: 10px;
+    }
+    #nav {
+        background: chocolate;
+        text-align: center;
+        padding: 6px;
+        position: fixed;
+        width: 100%;
+    }
+    #bannerImage {
+        width: 100%;
+    }
+    .details{
+      color:#753A1A;
+      font-size:15px;
+    }
+    #header
+    {
+        background: darkorange;
+        color:white;
+        text-align: center;
+        padding: 10px;
+        font-size: 15px;
+       
+    }
+    #myCanvas{
+        margin-top: 10px;
+        margin-left: 25%;
+        width:50%;
+        height:50%;
+        border:5px solid orange;
+        background-color:grey;  
+    }
+
+     .img-up{
+            height: 50px ;
+           
+           
+        }
+
+      .activity{
+        color: #a32727;
+        padding-left: 15px;
+        text-decoration: underline;
+
+    }
+    </style>
+    
+  </head>
+  <body>
+   	<div id="nav"> 
+    `   <a href="index.html" class="link">HOME</a> 
+         
+         <a href="" class="link">PHOTOGALLERY</a> 
+        <a href="" class="link">REGISTER</a> 
+    </div>
+    <div id="banner"> 
+        <img id="bannerImage" src="Images/banner.jpg">
+    </div>
+    <div class="details">
+      <p>Extra-curricular classes are an essential component of education. As an educational institution, we believe in the student's holistic development and keep that goal. We have launched a new website with which we aim to inform students about the school's extra-curricular activities during the current academic year. We will post images of the past activities on the Photogallery page of the website. The schedule of the upcoming events is present on the timetable page.</p>
+      <br/>
+      <br/>
+     
+      
+     <div class="mycanvas">
+         <div id="header">Few Highlights</div>
+      <canvas id="myCanvas"></canvas>
+      <script>
+        var img1 = new Image();
+        img1.src = "Images/painting.jpg";
+        img1.onload = display;
+
+        var img2 = new Image();
+        img2.src = "Images/yoga.jpg";
+        img2.onload = display;
+
+        //Activity3: Create an image object using the URL Images/cricket.png. Write the code to call the display function after the image is loaded.
+       
+       
+
+        
+        var canvas = document.getElementById("myCanvas");
+		var ctx = canvas.getContext("2d");
+        
+        function display() {
+
+            // for first image set timeout is 0 (no delay)
+            setTimeout(function() {
+                ctx.drawImage(img1,0,0,
+                              ctx.canvas.width,
+                              ctx.canvas.height);
+            }, 0);
+
+            // for second image set timeout is 1000 (1s delay)
+            setTimeout(function() {
+                ctx.drawImage(img2,0,0,
+                              ctx.canvas.width,
+                              ctx.canvas.height);
+            }, 1000);
+
+             // Activity 4: Call the setTimeout() to draw the third image object
+
+
+
+
+            
+            // restart the slideshow after 3rd image (12s delay)
+            setTimeout(display, 12000);
+        }
+        
+       
+    </script>
+       
+      </div> 
+     <div class="details">
+    <p>The school will provide mentorship for the following activities:</p>
+    <div>
+      <div>
+  
+       <div>
+      <h3 class="activity">Painting </h3> 
+      <p>Painting sessions will be conducted on Monday and Wednesday during drawing classes. Every grade will have a drawing session on Monday and Tuesday. Kindly contact the drawing teacher for the painting kit upon registration. The student will not be allowed to attend the painting class without the allotted kit.
+      </p>
+      </div>
+      
+       <div>
+      <h3 class="activity">Yoga </h3> 
+      <p>This activity shall be conducted every Tuesday and Friday during the school assembly. School sports uniform is compulsory during yoga sessions.</p>
+      </div>
+
+<!--Activity 1: Spot the error: How to style the heading "Cricket" like the headings of above activities.-->
+
+       <div>
+      <h3>Cricket</h3> 
+      <p>Selected students will represent the school in the upcoming interschool cricket tournament. Interest students shall register using the registration link.</p>
+      </div>
+          
+    </div>  
+    <br/>
+    <br/>
+    
+     <!-- Activity2: Add "Scroll-to-top" link with the image as a link, use image URL: Images/up-arrow.png-->
+     <div id="totop" >
+       <a href=" " >
+
+       </a>  
+    </div>
+  </body>
+</html>
